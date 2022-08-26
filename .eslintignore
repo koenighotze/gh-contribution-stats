@@ -1,0 +1,7 @@
+build/*
+hook/*
+node_modules/*
+k8s/*
+tf/*
+tf2/*
+spikes/*
