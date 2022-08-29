@@ -51,3 +51,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
+      - name: Uploading coverage
+        uses: codacy/codacy-coverage-reporter-action@v1
+        with:
+          api-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: ./coverage/lcov.info
+        env:
+          CODACY_PROJECT_NAME: "gh-contribution-stats"
+          CODACY_ORGANIZATION_PROVIDER: "gh"
+          CODACY_USERNAME: "${{ github.repository_owner }}"
