@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Scaning code
-        uses: aquasecurity/trivy-action@0.2.0
+        uses: aquasecurity/trivy-action@0.7.1
         with:
           scan-type: "fs"
           ignore-unfixed: true
