@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  qa:
+  security-checks:
     runs-on: ubuntu-20.04
 
     steps:
@@ -27,17 +27,23 @@ jobs:
           format: "table"
           template: "@/contrib/sarif.tpl"
           severity: "MEDIUM,HIGH,CRITICAL"
+
+  qa:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checking out
+        uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3.4.1
+        with:
+          node-version: '14.x'
+      - name: Install dependencies
+        run: npm ci
       - name: Linting
         run: npm run lint
       - name: Check format
         run: npm run format
-      - name: Detecting secrets
-        uses: reviewdog/action-detect-secrets@v0.11
-        with:
-          reporter: github-check
-          github_token: ${{ secrets.github_token }}
-          fail_on_error: true
-          detect_secrets_flags: --exclude-files .git
       - name: Testing
         run: npm t
       - name: SonarCloud Scan
