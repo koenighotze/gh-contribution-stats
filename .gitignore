@@ -12,3 +12,6 @@ build/
 users-cwp.json
 .env
 stats
+coverage
+.vscode/
+.scannerwork
