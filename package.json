@@ -15,7 +15,7 @@
   "author": "Koenighotze",
   "dependencies": {
     "dotenv": "^16.0.1",
-    "graphql-request": "^4.3.0",
+    "graphql-request": "^5.0.0",
     "moment": "^2.29.4"
   },
   "devDependencies": {
