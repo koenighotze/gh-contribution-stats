@@ -14,7 +14,7 @@ jobs:
       - name: Checking out
         uses: actions/checkout@v3
       - name: Scaning code
-        uses: aquasecurity/trivy-action@0.7.1
+        uses: aquasecurity/trivy-action@0.8.0
         with:
           scan-type: "fs"
           ignore-unfixed: true
@@ -29,7 +29,7 @@ jobs:
       - name: Checking out
         uses: actions/checkout@v3
       - name: Set up Node.js
-        uses: actions/setup-node@v3.4.1
+        uses: actions/setup-node@v3.5.1
         with:
           node-version: '14.x'
       - name: Install dependencies
@@ -41,7 +41,7 @@ jobs:
       - name: Testing
         run: npm t
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v1.6
+        uses: SonarSource/sonarcloud-github-action@v1.8
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
