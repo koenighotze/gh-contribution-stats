@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Scaning code
-        uses: aquasecurity/trivy-action@0.7.1
+        uses: aquasecurity/trivy-action@0.8.0
         with:
           scan-type: "fs"
           ignore-unfixed: true
@@ -48,7 +48,7 @@ jobs:
       - name: Checking out
         uses: actions/checkout@v3
       - name: Set up Node.js
-        uses: actions/setup-node@v3.4.1
+        uses: actions/setup-node@v3.5.1
         with:
           node-version: '14.x'
       - name: Install dependencies
