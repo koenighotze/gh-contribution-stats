@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Scaning code
-        uses: aquasecurity/trivy-action@0.15.0
+        uses: aquasecurity/trivy-action@0.18.0
         with:
           scan-type: "fs"
           ignore-unfixed: true
