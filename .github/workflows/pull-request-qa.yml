@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checking out
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Detecting secrets
         uses: reviewdog/action-detect-secrets@v0.13
         with:
@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checking out
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Reviewing yaml files
         uses: reviewdog/action-yamllint@v1.8
         with:
@@ -46,7 +46,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checking out
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Set up Node.js
         uses: actions/setup-node@v4.0.0
         with:
