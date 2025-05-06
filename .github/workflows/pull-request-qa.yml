@@ -24,7 +24,7 @@ jobs:
       - name: Checking out
         uses: actions/checkout@v3
       - name: Reviewing yaml files
-        uses: reviewdog/action-yamllint@v1.8
+        uses: reviewdog/action-yamllint@v1.21
         with:
           reporter: github-pr-review
           github_token: ${{ secrets.github_token }}
