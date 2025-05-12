@@ -19,7 +19,7 @@
     "moment": "^2.29.4"
   },
   "devDependencies": {
-    "@types/jest": "^29.5.11",
+    "@types/jest": "^29.5.14",
     "eslint": "^8.39.0",
     "eslint-config-prettier": "^10.1.2",
     "eslint-plugin-import": "^2.31.0",
