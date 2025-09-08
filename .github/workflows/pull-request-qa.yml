@@ -11,7 +11,7 @@ jobs:
       - name: Checking out
         uses: actions/checkout@v5
       - name: Detecting secrets
-        uses: reviewdog/action-detect-secrets@v0.28
+        uses: reviewdog/action-detect-secrets@v0.29
         with:
           reporter: github-pr-review
           github_token: ${{ secrets.github_token }}
