@@ -27,7 +27,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "jest": "^30.0.0",
     "prettier": "^3.5.3",
-    "snyk": "^1.1298.3",
+    "snyk": "^1.1300.1",
     "uuid": "^13.0.0"
   }
 }
